@@ -13,7 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons"
 
 type LayoutProps = {
-  children: React.ReactNode
+  children: JSX.Element | JSX.Element[]
 }
 
 const Layout = ({ children }: LayoutProps) => {

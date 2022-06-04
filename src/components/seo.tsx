@@ -10,12 +10,12 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-type MetaProps = JSX.IntrinsicElements["meta"]
+type MetaProps = JSX.IntrinsicElements['meta']
 
 type SeoProps = {
-  description?: string,
-  lang?: string,
-  meta?: MetaProps[] | undefined,
+  description?: string
+  lang?: string
+  meta?: MetaProps[] | undefined
   title: string
 }
 
