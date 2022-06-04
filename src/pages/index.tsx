@@ -17,8 +17,8 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => (
       <main className="md:col-start-2 md:col-end-5 p-4 max-w-none prose dark:prose-invert bg-slate-100 dark:bg-slate-900">
         <h2>Experience</h2>
 
-        {data.experiences.edges.map((edge) => (
-          <section>
+        {data.experiences.edges.map((edge, i) => (
+          <section key={i}>
             <h3 className="font-display">{edge.node.frontmatter?.title}</h3>
             <p className="font-display">
               <strong>{edge.node.frontmatter?.company}</strong>

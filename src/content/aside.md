@@ -7,7 +7,7 @@ slug: '/education/bs-computer-science'
 
 [me@migueluy.dev](mailto:me@migueluy.dev)
 
-https://github.com/yuleugim
+[github.com/yuleugim](https://github.com/yuleugim)
 
 ## Profile
 

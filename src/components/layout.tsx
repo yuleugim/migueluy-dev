@@ -6,7 +6,7 @@
  */
 
 import * as React from 'react'
-import { graphql, StaticQueryProps, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -15,8 +15,6 @@ import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons"
 type LayoutProps = {
   children: React.ReactNode
 }
-
-const darkModeEnabled = (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
 
 const Layout = ({ children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
@@ -30,14 +28,21 @@ const Layout = ({ children }: LayoutProps) => {
     }
   `)
 
-  const [darkMode, setDarkMode] = React.useState(darkModeEnabled)
+  const [darkMode, setDarkMode] = React.useState<boolean | null>(null)
   React.useEffect(() => {
+    if (darkMode === null) {
+      const darkModeEnabled = (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
+      setDarkMode(darkModeEnabled)
+    }
+
     localStorage.setItem('theme', darkMode ? 'dark' : 'light')
   }, [darkMode])
 
   return (
     <>
-      <div className="flex lg:py-4 min-h-screen bg-slate-100 dark:bg-stone-900">
+      <Helmet htmlAttributes={{ class: darkMode ? 'dark' : '' }} />
+
+      <div className={`flex lg:py-4 min-h-screen bg-slate-100 dark:bg-stone-900 transition ${darkMode === null ? 'opacity-0' : 'opacity-100'}`}>
         <div className="relative mx-auto max-w-6xl grid md:grid-cols-4 md:grid-rows-[auto_minmax(0,_1fr)_auto] shadow-2xl rounded overflow-hidden gap-px bg-slate-200 dark:bg-slate-800">
           <section className="relative flex flex-col md:flex-row md:items-end md:justify-center col-span-full p-4 md:p-6 max-w-none bg-slate-100 dark:bg-slate-900 prose prose-2xl dark:prose-invert">
             <h1 className="font-display m-0">{data.site.siteMetadata.title}</h1>
@@ -70,8 +75,6 @@ const Layout = ({ children }: LayoutProps) => {
           </footer>
         </div>
       </div>
-
-      <Helmet htmlAttributes={{ class: darkMode ? 'dark' : '' }} />
     </>
   )
 }
