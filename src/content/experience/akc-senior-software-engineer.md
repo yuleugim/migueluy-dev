@@ -8,7 +8,7 @@ company: 'American Kennel Club'
 title: 'Senior Software Engineer (Contractual)'
 ---
 
-- Maintain and develop various AKC high traffic and high revenue websites, including akc.org and shop.akc.org.
-- Implement and improve the developer tooling used on various sites, which have led to improvements in development time and overall sites’ speeds.
-- Troubleshoot production issues with speed and confidence, minimizing revenue loss and downtime on parts of the sites.
-- Collaborate with developers in code reviews and ensure that everyone produces the best possible code.
+- Maintained and develop various AKC high traffic and high revenue websites, including akc.org and shop.akc.org.
+- Implemented and improve the developer tooling used on various sites, which have led to improvements in development time and overall sites’ speeds.
+- Troubleshooted production issues with speed and confidence, minimizing revenue loss and downtime on parts of the sites.
+- Collaborated with developers in code reviews and ensure that everyone produces the best possible code.

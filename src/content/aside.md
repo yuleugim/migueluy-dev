@@ -35,6 +35,6 @@ new technologies—and how to best use them—is part of my everyday mantra.
 
 ## Education
 
-**B.S. in Computer Science** - _Magna Cum Laude, Business Specialization_
+**B.S. in Computer Science** - Magna Cum Laude, Business Specialization
 
 _St. John's University_

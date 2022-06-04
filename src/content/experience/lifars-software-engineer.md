@@ -8,7 +8,7 @@ company: 'LIFARS LLC'
 title: 'Software Engineer'
 ---
 
-- Architected, developed, secured, and maintained the frontend and backend of lifars.com, a performant and mobile-responsive WordPress site built in accordance with modern best practices.
+- Architected, developed, secured, and maintained the frontend and backend of lifars.com—a performant and mobile-responsive WordPress site built in accordance with modern best practices.
 - Built and improved a set of robust publishing tools for the CMS by designing the UX/UI around both developer and marketing needs.
 - Boosted the front end page load performance of the website by 260%.
 - Built designs for the frontend with knowledge from analyzing the trends and practices in modern web design.

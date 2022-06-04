@@ -9,6 +9,6 @@ title: 'Threat Intelligence Analyst'
 ---
 
 - Monitored client networks and produced monthly reports with recommendations based on their current status.
-- Deployed, tested, and documented various cybersecurity and forensic software and hardware, on various systems and virtual machines.
+- Deployed, tested, and documented various cybersecurity and forensic software and hardware, on both bare-metal and virtual machines.
 - Managed various evidence drives and data, assuring that all procedures are followed and clearly documented.
 - Automated the network security report process by building various XSLT templates for the reporting application.
