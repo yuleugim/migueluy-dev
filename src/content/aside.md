@@ -11,7 +11,7 @@ slug: '/education/bs-computer-science'
 
 ## Profile
 
-I am a fullstack engineer with a passion for the web, performance, and finding
+I am a full-stack engineer with a passion for the web, performance, and finding
 the best solutions that meet customer demands and expectations. Learning about
 new technologies—and how to best use them—is part of my everyday mantra.
 
