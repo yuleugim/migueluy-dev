@@ -22,7 +22,7 @@ new technologies—and how to best use them—is part of my everyday mantra.
 - Composer
 - JavaScript
 - React
-- NPMy
+- NPM
 - NodeJS
 - HTML
 - CSS
