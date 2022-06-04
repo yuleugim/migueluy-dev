@@ -15,4 +15,4 @@ title: 'Software Engineer'
 - Automated various developer tasks by testing and implementing tooling geared towards our needs.
 - Discussed, strategized, and developed the content strategy with the marketing team.
 - Communicated benefits and risks in the overall UX/UI design with the designers.
-- Provided insights on user behavior and usage by using Google Analytics, Clicky, Jetpack and Hotjar’ analytics platforms.
+- Provided insights on user behavior and usage by using Google Analytics, Clicky, Jetpack and Hotjar’s analytics platforms.
