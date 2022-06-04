@@ -9,11 +9,11 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => (
     <Seo title="Home" />
 
     <aside
-      className="col-span-1 p-4 max-w-none prose prose-a:break-words prose-headings:text-nord-9 dark:prose-invert bg-nord-5 dark:bg-nord-1"
+      className="col-span-1 p-4 max-w-none prose prose-a:break-words prose-headings:text-nord-9 dark:prose-invert"
       dangerouslySetInnerHTML={{ __html: data.aside?.html || '' }}
     />
 
-    <main className="md:col-start-2 md:col-end-5 p-4 max-w-none prose prose-headings:text-nord-9 dark:prose-invert bg-nord-5 dark:bg-nord-1">
+    <main className="md:col-start-2 md:col-end-5 p-4 max-w-none prose prose-headings:text-nord-9 dark:prose-invert">
       <h2>Experience</h2>
 
       {data.experiences.edges.map((edge, i) => (
