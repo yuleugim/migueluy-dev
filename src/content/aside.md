@@ -9,6 +9,8 @@ slug: '/education/bs-computer-science'
 
 [github.com/yuleugim](https://github.com/yuleugim)
 
+[Resume](/resume.pdf)
+
 ## Profile
 
 I am a full-stack engineer with a passion for the web, performance, and finding
