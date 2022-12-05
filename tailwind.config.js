@@ -8,8 +8,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      display: ['Comfortaa', ...defaultTheme.fontFamily.serif],
-      body: ['Space Mono', ...defaultTheme.fontFamily.mono],
+      display: `Comfortaa, ${defaultTheme.fontFamily.serif.join(', ')}`,
+      body: `Space Mono, ${defaultTheme.fontFamily.mono.join(', ')}`,
     },
     extend: {
       colors: {
