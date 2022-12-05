@@ -13,27 +13,28 @@ slug: '/education/bs-computer-science'
 
 ## Profile
 
-I am a full-stack engineer with a passion for the web, performance, and finding
-the best solutions that meet customer demands and expectations. Learning about
-new technologies—and how to best use them—is part of my everyday mantra.
+I am a full-stack engineer with a passion for the web, performance, and finding the best solutions that meet customer demands and expectations. Learning about new technologies—and how to best use them—is part of my everyday mantra.
 
 ## Skills and Technologies
 
-- PHP
-- Laravel
-- Composer
 - JavaScript
 - React
-- NPM
-- NodeJS
-- HTML
+- Redux
 - CSS
+- SASS
+- CSS-in-JS
+- NodeJS
+- PHP
+- Laravel
+- HTML
+- Composer
+- NPM
 - WordPress
 - Shopify
 - Laravel
-- Documentation
-- RESTful and GraphQL APIs
 - SQL
+- RESTful & GraphQL APIs
+- Testing & Documentation
 
 ## Education
 
