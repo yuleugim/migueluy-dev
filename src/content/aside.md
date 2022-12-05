@@ -18,6 +18,7 @@ I am a full-stack engineer with a passion for the web, performance, and finding 
 ## Skills and Technologies
 
 - JavaScript
+- TypeScript
 - React
 - Redux
 - CSS
@@ -29,6 +30,8 @@ I am a full-stack engineer with a passion for the web, performance, and finding 
 - HTML
 - Composer
 - NPM
+- CI/CD
+- Docker
 - WordPress
 - Shopify
 - Laravel
