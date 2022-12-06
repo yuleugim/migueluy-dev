@@ -48,12 +48,12 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPage {
-    aside: markdownRemark(frontmatter: { type: { eq: "aside" } }) {
+    aside: markdownRemark(frontmatter: { type: { eq: "aside" }}) {
       html
     }
     experiences: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "experience" } } }
-      sort: { frontmatter: {dateFrom: DESC }
+      sort: { frontmatter: { dateFrom: DESC } }
     ) {
       edges {
         node {
