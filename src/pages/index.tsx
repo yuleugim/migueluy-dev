@@ -53,7 +53,7 @@ export const query = graphql`
     }
     experiences: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "experience" } } }
-      sort: { fields: frontmatter___dateFrom, order: DESC }
+      sort: { frontmatter: {dateFrom: DESC }
     ) {
       edges {
         node {
