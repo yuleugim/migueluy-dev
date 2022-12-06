@@ -49,7 +49,7 @@ export default async function handler(req: GatsbyFunctionRequest, res: GatsbyFun
   }
 
   await urlToPDF(
-    `${process.env.DOMAIN || 'http://localhost:9000'}/?pdf=true`,
+    `${process.env.DOMAIN || 'http://localhost:8000'}/?pdf=true`,
     `${process.env.PUBLIC_DIR}/resume.pdf`
   )
 

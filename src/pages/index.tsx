@@ -13,7 +13,7 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
       <Seo title="Home" />
 
       <aside className="col-span-1 p-4 max-w-none prose prose-a:break-words prose-headings:text-nord-9 dark:prose-invert">
-        {!PDFParam && <a className="block mb-8" href="/api/resume">Resume</a>}
+        {!PDFParam && <a className="block mb-8" href="/resume.pdf">Resume</a>}
 
         <div
           className="col-span-1 max-w-none prose prose-a:break-words prose-headings:text-nord-9 dark:prose-invert"
