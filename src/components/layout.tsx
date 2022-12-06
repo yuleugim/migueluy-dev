@@ -8,6 +8,7 @@
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
+import { useQueryParamString } from 'react-use-query-param-string'
 import { Helmet } from 'react-helmet'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons"
@@ -38,6 +39,8 @@ const Layout = ({ children }: LayoutProps) => {
     localStorage.setItem('theme', darkMode ? 'dark' : 'light')
   }, [darkMode])
 
+  const [PDFParam] = useQueryParamString('pdf', '')
+
   return (
     <>
       <Helmet htmlAttributes={{ class: darkMode ? 'dark' : '' }} />
@@ -49,19 +52,21 @@ const Layout = ({ children }: LayoutProps) => {
 
             <p className="font-display m-0 pt-3 md:pt-0 md:pl-3 text-nord-7">{data.site.siteMetadata.description}</p>
 
-            <button
-              type="button"
-              role="switch"
-              className="absolute right-0 bottom-0 md:bottom-auto md:top-0 md:mt-6 my-6 mr-6 w-14 py-1 px-0 inline-flex rounded-full cursor-pointer transition border-2 bg-nord-3 dark:bg-nord-4 border-nord-3"
-              onClick={() => setDarkMode(!darkMode)}
-            >
-              <span
-                className="flex items-center justify-center w-6 h-6 rounded-full transition translate-x-6 dark:translate-x-1 text-nord-3 dark:text-nord-4 bg-nord-4 dark:bg-nord-3"
-                aria-hidden="true"
+            {!PDFParam && (
+              <button
+                type="button"
+                role="switch"
+                className="absolute right-0 bottom-0 md:bottom-auto md:top-0 md:mt-6 my-6 mr-6 w-14 py-1 px-0 inline-flex rounded-full cursor-pointer transition border-2 bg-nord-3 dark:bg-nord-4 border-nord-3"
+                onClick={() => setDarkMode(!darkMode)}
               >
-                <FontAwesomeIcon icon={darkMode ? faMoon : faSun} className="h-4" />
-              </span>
-            </button>
+                <span
+                  className="flex items-center justify-center w-6 h-6 rounded-full transition translate-x-6 dark:translate-x-1 text-nord-3 dark:text-nord-4 bg-nord-4 dark:bg-nord-3"
+                  aria-hidden="true"
+                >
+                  <FontAwesomeIcon icon={darkMode ? faMoon : faSun} className="h-4" />
+                </span>
+              </button>
+            )}
           </section>
 
           {children}
