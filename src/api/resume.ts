@@ -38,16 +38,24 @@ export default async function handler(req: GatsbyFunctionRequest, res: GatsbyFun
   if (process.env.NODE_ENV !== 'development') {
     try {
       await readFile(`${process.env.PUBLIC_DIR}/resume.pdf`)
-      res.redirect('/resume.pdf')
+      res.redirect(
+        process.env.COMMIT_REF
+          ? `/resume.pdf?ver=${process.env.COMMIT_REF}`
+          : '/resume.pdf'
+      )
     } catch (err) {
-      // No file found, continuing to generate file
+      // readFile error due to no file found, continuing to generate file
     }
   }
 
   await urlToPDF(
-    `${process.env.DOMAIN || 'http://localhost:8000'}/?pdf=true`,
+    `${process.env.DOMAIN || 'http://localhost:9000'}/?pdf=true`,
     `${process.env.PUBLIC_DIR}/resume.pdf`
   )
 
-  res.redirect('/resume.pdf')
+  res.redirect(
+    process.env.COMMIT_REF
+      ? `/resume.pdf?ver=${process.env.COMMIT_REF}`
+      : '/resume.pdf'
+  )
 }
