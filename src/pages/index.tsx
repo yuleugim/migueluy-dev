@@ -4,6 +4,7 @@ import { useQueryParamString } from 'react-use-query-param-string'
 
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import resumePDF from '../../static/resume.pdf'
 
 const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
   const [PDFParam] = useQueryParamString('pdf', '')
@@ -13,7 +14,7 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
       <Seo title="Home" />
 
       <aside className="col-span-1 p-4 max-w-none prose prose-a:break-words prose-headings:text-nord-9 dark:prose-invert">
-        {!PDFParam && <a className="block mb-8" href="/resume.pdf">Resume</a>}
+        {!PDFParam && <a className="block mb-8" href={resumePDF}>Resume</a>}
 
         <div
           className="col-span-1 max-w-none prose prose-a:break-words prose-headings:text-nord-9 dark:prose-invert"
