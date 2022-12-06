@@ -5,11 +5,11 @@ slug: '/education/bs-computer-science'
 
 ## Contact
 
-[Email](mailto:me@migueluy.dev)
+[me@migueluy.dev](mailto:me@migueluy.dev)
 
-[LinkedIn](https://www.linkedin.com/in/miguel-uy-a78b24131/)
+[linkedin.com/in/miguel-uy-a78b24131](https://www.linkedin.com/in/miguel-uy-a78b24131/)
 
-[GitHub](https://github.com/yuleugim)
+[github.com/yuleugim](https://github.com/yuleugim)
 
 ## Profile
 
