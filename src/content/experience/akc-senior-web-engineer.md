@@ -9,7 +9,8 @@ title: 'Senior Web Engineer'
 ---
 
 - Serve as team frontend lead by taking charge of the architecture and development practices on the frontend space.
-- Lead the development on various projects, from full site redesigns, to interactive landing page experiences, to frontend and backend refactors and optimizations.
+- Lead the development on various projects, from pixel-perfect full site redesigns, to interactive landing page experiences, to frontend and backend refactors and optimizations.
+- Create and advocate for reusable component architectures to allow for ease of maintainability and development of new features.
 - Implement the developer and deployment tooling, with an aim to integrate the best fitting modern technologies to improve the developer experience and optimize production deployment.
 - Boost the overall performance of our consumer facing sites by implementing the best practices in page speed optimization.
 - Automate processes throughout the entire development lifecycle, from coding to deployment.
