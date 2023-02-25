@@ -10,8 +10,8 @@ import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import { useQueryParamString } from 'react-use-query-param-string'
 import { Helmet } from 'react-helmet'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 
 type LayoutProps = {
   children: JSX.Element | JSX.Element[]
@@ -32,7 +32,10 @@ const Layout = ({ children }: LayoutProps) => {
   const [darkMode, setDarkMode] = React.useState<boolean | null>(null)
   React.useEffect(() => {
     if (darkMode === null) {
-      const darkModeEnabled = (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
+      const darkModeEnabled =
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
       setDarkMode(darkModeEnabled)
     }
 
@@ -45,12 +48,20 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <Helmet htmlAttributes={{ class: darkMode ? 'dark' : '' }} />
 
-      <div className={`flex lg:py-4 min-h-screen bg-nord-4 dark:bg-nord-0 transition ${darkMode === null ? 'opacity-0' : 'opacity-100'}`}>
+      <div
+        className={`flex lg:py-4 min-h-screen bg-nord-4 dark:bg-nord-0 transition ${
+          darkMode === null ? 'opacity-0' : 'opacity-100'
+        }`}
+      >
         <div className="relative mx-auto max-w-6xl grid md:grid-cols-4 md:grid-rows-[auto_minmax(0,_1fr)_auto] shadow-2xl rounded overflow-hidden bg-nord-5 dark:bg-nord-1">
           <section className="relative flex flex-col md:flex-row md:items-end md:justify-center col-span-full px-4 py-10 md:p-10 max-w-none bg-nord-6 dark:bg-nord-0 prose prose-2xl dark:prose-invert">
-            <h1 className="font-display m-0 text-nord-8">{data.site.siteMetadata.title}</h1>
+            <h1 className="font-display m-0 text-nord-8">
+              {data.site.siteMetadata.title}
+            </h1>
 
-            <p className="font-display m-0 pt-3 md:pt-0 md:pl-3 text-nord-7">{data.site.siteMetadata.description}</p>
+            <p className="font-display m-0 pt-3 md:pt-0 md:pl-3 text-nord-7">
+              {data.site.siteMetadata.description}
+            </p>
 
             {!PDFParam && (
               <button
@@ -63,7 +74,10 @@ const Layout = ({ children }: LayoutProps) => {
                   className="flex items-center justify-center w-6 h-6 rounded-full transition translate-x-6 dark:translate-x-1 text-nord-3 dark:text-nord-4 bg-nord-4 dark:bg-nord-3"
                   aria-hidden="true"
                 >
-                  <FontAwesomeIcon icon={darkMode ? faMoon : faSun} className="h-4" />
+                  <FontAwesomeIcon
+                    icon={darkMode ? faMoon : faSun}
+                    className="h-4"
+                  />
                 </span>
               </button>
             )}
@@ -75,7 +89,10 @@ const Layout = ({ children }: LayoutProps) => {
             <p className="px-4 py-10 md:p-10">
               © {new Date().getFullYear()} Miguel Uy
               <br />
-              Built with <a href="https://github.com/yuleugim/migueluy.dev">React, Gatsby, Typescript, and TailwindCSS</a>
+              Built with{' '}
+              <a href="https://github.com/yuleugim/migueluy.dev">
+                React, Gatsby, Typescript, and TailwindCSS
+              </a>
             </p>
           </footer>
         </div>
